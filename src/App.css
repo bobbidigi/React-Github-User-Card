@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+h5{
+  margin: 0
+}
+.card-container{
+  display: flex;
+  margin: 0 auto;
+  color: #666;
+  padding: .666rem;
+  width: 80%;
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(102, 102, 102, 0.425);
+  padding: .666rem;
+  border-radius: 7px;
+}
+
+.card .img-container{
+  object-fit: cover;
+  width: 20%;
+}
+.card .img-container img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card .details{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: .666rem;
+  width: 85%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  text-transform: uppercase;
 }
