@@ -50,13 +50,21 @@ h5{
   padding: .666rem;
   width: 80%;
 }
-.card{
+.card-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-container .card{
   display: flex;
   justify-content: space-between;
   border: 1px solid rgba(102, 102, 102, 0.425);
   padding: .666rem;
   border-radius: 7px;
+  margin-top: 1em;
 }
+
 
 .card .img-container{
   object-fit: cover;

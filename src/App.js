@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import axios from 'axios'
-import Card from './components/Card'
+import Card from './components/CardList'
 
 export default class App extends Component {
 
