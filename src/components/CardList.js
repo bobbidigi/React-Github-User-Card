@@ -8,7 +8,8 @@ export default class CardList extends Component {
         super();
         this.state = {
             user: '',
-            followers: []
+            followers: [],
+            following: 'following'
         }
     }
 
@@ -28,16 +29,31 @@ export default class CardList extends Component {
         })
         this.fetchData()
     }
+
+    changeClass = (e) => {
+        if(this.state.following === 'following'){
+            this.setState({
+                following: 'display-following'       
+            })
+        }else{
+            this.setState({
+                following: 'following'       
+            })
+        }
+    }
+
     render() {
         return (
             <div className="card-container">
                 <Card info={this.props.info}/>
                 
-
-
-                {this.state.followers.map(follower =>{
-                    return <Card info={follower}/>
-                })}
+                <button onClick={(e) => this.changeClass()}>Followers</button>
+                <div className={this.state.following}>
+                    {this.state.followers.map(follower =>{
+                        return <Card info={follower}/>
+                    })}
+                </div>
+                
             </div>
         )
     }
